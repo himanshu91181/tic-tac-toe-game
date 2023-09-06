@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 0;
+    height: 50px;
+    background-color: rgb(120, 148, 240);
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    
+    justify-content: center;
+    margin: 30px ; 
+    
+}
+
+
+.cell {
+    background-color: aliceblue;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    cursor: pointer;
+}
+.cell:hover{
+    background-color: rgb(221, 221, 248);
+}
+
+.gameover{
+    display:none;
+}
+.gameinfo{
+    font-size: 36px;
+}
+
+    
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.bl{
+    border-left: 0;
+}
+.br{
+    border-right: 0;
+}
+.bt{
+    border-top: 0;
+}
+.bb{
+    border-bottom: 0;
+}
+.win-line {
+    position: absolute;
+    z-index: 1;
+    height: 5px;
+    background-color: red;
+    display: none;
+}
+@media only screen and (max-width: 426px) {
+    
+    h1{
+        font-size: 1.5rem;
+    }
+    #board { 
+        display: grid;
+        grid-template-columns: repeat(3, 55px);
+        grid-template-rows: repeat(3, 55px);  
+    }
+    
+    .cell {
+        background-color: aliceblue;
+        width: 55px;
+        height: 55px;
+       
+    }
+    .gameinfo{
+        font-size: 1.5rem;
+    }
+    button{
+        margin-top: 15px;
+        padding: 5px 10px;
+    }
+    
+}
